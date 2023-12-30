@@ -1,91 +1,218 @@
-*{
-margin: 0;
-padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-.img_container{
-    width: 100%;
-    height: 100vh;
-    /* position: absolute; */
-    transition-timing-function: ease-in-out;
-    background-color: black;
-    z-index: 2;
-    
+body {
+  font-family: "Roboto Flex", sans-serif;
 }
 
-.img_container div img
-{
-    /* overflow: hidden; */
-    width: 100%;
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: absolute;
-    /* visibility: hidden; */
+.bg-imgs-container {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), transparent);
+}
+figure img {
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  /* opacity: 0.7; */
 }
 
-
-
-
-.img1{
-    animation: fade1 15s  infinite;
+.bg1 {
+  animation: fade1 15s infinite;
 }
-.img2{
-    animation: fade2 15s  infinite;
-}
-.img3{
-    animation: fade3 15s  infinite;
-}
-.img4{
-    animation: fade4 15s  infinite;
-}
-.img5{
-    animation: fade5 15s  infinite;
+.bg2 {
+  animation: fade2 15s infinite;
 }
 
+.bg3 {
+  animation: fade3 15s infinite;
+}
+
+.bg4 {
+  animation: fade4 15s infinite;
+}
+
+.bg5 {
+  animation: fade5 15s infinite;
+}
 @keyframes fade1 {
-    0%{opacity: 0;}
-    20%{opacity: 1;}
-    40%{opacity: 0;}
-    60%{opacity: 0;}
-    80%{opacity: 0;}
-    100%{opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 @keyframes fade2 {
-    0%{opacity: 0;}
-    20%{opacity: 0;}
-    40%{opacity: 1;}
-    60%{opacity: 0;}
-    80%{opacity: 0;}
-    100%{opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 @keyframes fade3 {
-    0%{opacity: 0;}
-    20%{opacity: 0;}
-    40%{opacity: 0;}
-    60%{opacity: 1;}
-    80%{opacity: 0;}
-    100%{opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
-
 @keyframes fade4 {
-    0%{opacity: 0;}
-    20%{opacity: 0;}
-    40%{opacity: 0;}
-    60%{opacity: 0;}
-    80%{opacity: 1;}
-    100%{opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade5 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes fade5 {
-    0%{opacity: 0;}
-    20%{opacity: 0;}
-    40%{opacity: 0;}
-    60%{opacity: 0;}
-    80%{opacity: 0;}
-    100%{opacity: 1;}
+h1 {
+  font-size: 100px;
+  color:rgb(255 215 93);
+  line-height: 0.85;
+  margin-bottom: 28px;
+  letter-spacing: 3px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+p {
+  margin-bottom: 30px;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "Roboto Flex", sans-serif;
+}
+.hero-section {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  padding: 40px;
+  z-index: 1;
+  font-family: "Bebas Neue", sans-serif;
+  
+}
+
+.hero-inner-container {
+  width: 50%;
+}
+
+nav {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  gap: 400px;
+  color: #ffedb4;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  width: 50%;
+}
+
+.logo {
+  width: 80px;
+}
+
+
+
+ul li{
+    display:inline;
+    text-decoration:none;
+    margin:15px;
+    list-style: none;
+
 }
