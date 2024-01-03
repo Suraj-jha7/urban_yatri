@@ -1,218 +1,213 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    transition: 1s;
 }
 
-body {
-  font-family: "Roboto Flex", sans-serif;
-}
-
-.bg-imgs-container {
-  width: 100%;
-  height: 100vh;
-  overflow-x: hidden;
-  position: relative;
-  background: linear-gradient(to top right, rgba(0, 0, 0, 0.6), transparent);
-}
-figure img {
-  width: 100%;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-  /* opacity: 0.7; */
-}
-
-.bg1 {
-  animation: fade1 15s infinite;
-}
-.bg2 {
-  animation: fade2 15s infinite;
-}
-
-.bg3 {
-  animation: fade3 15s infinite;
-}
-
-.bg4 {
-  animation: fade4 15s infinite;
-}
-
-.bg5 {
-  animation: fade5 15s infinite;
-}
-@keyframes fade1 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fade2 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fade3 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fade4 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fade5 {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-h1 {
-  font-size: 100px;
-  color:rgb(255 215 93);
-  line-height: 0.85;
-  margin-bottom: 28px;
-  letter-spacing: 3px;
-}
-
-h2 {
-  font-size: 20px;
-  margin-bottom: 30px;
-  color: #fff;
-  letter-spacing: 1.5px;
-}
-
-p {
-  margin-bottom: 30px;
-  color: white;
-  letter-spacing: 1px;
-  font-family: "Roboto Flex", sans-serif;
-}
-.hero-section {
-  position: absolute;
-  top: 55%;
-  transform: translateY(-50%);
-  padding: 40px;
-  z-index: 1;
-  font-family: "Bebas Neue", sans-serif;
-  
-}
-
-.hero-inner-container {
-  width: 50%;
-}
-
-nav {
-  z-index: 1;
-  position: absolute;
-  top: 20px;
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  gap: 400px;
-  color: #ffedb4;
-  font-size: 23px;
-  font-weight: 700;
-}
-
-.nav-links {
-  display: flex;
-  gap: 80px;
-  justify-content: center;
-  width: 50%;
-}
-
-.logo {
-  width: 80px;
-}
-
-
-
-ul li{
+nav ul li {
     display:inline;
     text-decoration:none;
     margin:15px;
     list-style: none;
+    background-color: transparent;
+}
+ul,li,.logo{
+    background-color: transparent;
+}
+
+nav ul li a{
+  text-decoration: none;
+  background-color: transparent;
+  margin: 10px;
+  letter-spacing: 3px;
+ 
+  
+}
+
+nav ul li a:hover{
+    color:#b19f70;
+}
+
+.nav-div{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: "Bebas Neue", sans-serif;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(2px);
+    background-color: transparent;
 
 }
+
+.logo{
+    margin-left: 50px;
+    letter-spacing: 3px;
+}
+
+.logo:hover{
+    scale: 1.2;
+}
+
+.nav-div ul{
+    margin-right: 50px;
+    position: relative;
+    
+}
+
+.btn{
+    padding: 9px 7px 8px 7px;
+    border-width: 1px;
+     border-color: rgb(255, 255, 255);
+     border-style: solid;
+}
+
+.btn:hover{
+    
+    background-color: white;
+    color: #343a40;
+}
+
+.btn::after{
+    content: "";
+    height: 48px;
+    width: 0px;
+    border: 1px solid rgb(255, 255, 255);
+    position:absolute;
+    right: 20px;
+    top:-8px;
+}
+
+.btn::before{
+    content: "";
+    height: 0px;
+    width: 144px;
+    border: 1px solid rgb(255, 254, 254);
+    position:absolute;
+    right: 20px;
+    top:40px;
+}
+
+.btn::before:hover{
+    width: 30px;
+}
+
+.onscroll {
+    backdrop-filter: blur(7px);
+    background-color:rgba(0,0,0,0.2);
+    /* padding: 30px 60px; */
+  }
+
+
+
+
+  /* HomeSection */
+  /* ----------------------------------------------------------------------------------------------------- */
+
+  /* .home-section{
+    position: relative;
+  }
+
+  .home-section .imgs{
+    position: absolute ;
+    z-index: -1;
+  } */
+
+  .home-section{
+    height: 700px;
+    width: 100%;
+    animation:fade 45s infinite ease-in-out;
+    
+    z-index: 2;
+}
+
+  figure{
+    height: 700px;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+   
+  }
+
+  @keyframes fade {
+    0% {
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Botswana-1536x768.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+      }
+    
+      10% {
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Botswana-1536x768.jpg?strip=all&lossy=1&sharp=1&ssl=1");     
+     }
+     15%{
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Zimbabwe_MAP_IMAGE-1536x768.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+     }
+    
+      30% {
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Tanzania-1536x768.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+      }
+    
+      45% {
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Uganda-1536x768.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+      }
+    
+      60% {
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Rwanda-1536x768.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+      }
+    
+      75% {
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Kenya-3-1536x768.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+      }
+    
+      100% {
+        background-image: url("https://edvwos9iedg.exactdn.com/wp-content/uploads/2023/11/Namibia_HEADER-1536x767.jpg?strip=all&lossy=1&sharp=1&ssl=1");
+      }
+}
+
+
+.hero-section{
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.hero-innerContainer,.mapsection{
+    margin: 50px;
+   
+}
+
+
+.hero-innerContainer  h1 span,.hero-innerContainer  h2 span  {
+    color: #b19f70;
+  }
+  
+.hero-innerContainer h1 {
+    font-size: 70px;
+    line-height: 80px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-weight: 600;
+  }
+  
+  .hero-innerContainer h2 {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+  }
+
+.hero-innerContainer  {
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 17px;
+    line-height: 38px;
+    margin-bottom: 35px;
+  }
+.mapsection{
+    margin-top: 140px;
+    scale: 1.3;
+}
+
