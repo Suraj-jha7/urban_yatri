@@ -5,6 +5,8 @@
     padding: 0;
     color: white;
     transition: 1s;
+    /* background-color: #fffbfb; */
+    font-family: "Bebas Neue", sans-serif;
 }
 
 nav ul li {
@@ -23,9 +25,7 @@ nav ul li a{
   background-color: transparent;
   margin: 10px;
   letter-spacing: 3px;
- 
-  
-}
+ }
 
 nav ul li a:hover{
     color:#b19f70;
@@ -34,11 +34,11 @@ nav ul li a:hover{
 .nav-div{
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     align-items: center;
     font-size: 22px;
     font-weight: 500;
-    font-family: "Bebas Neue", sans-serif;
+    font-family: "Bebas Neue", sans-serif; 
     position: fixed;
     width: 100%;
     backdrop-filter: blur(2px);
@@ -57,55 +57,83 @@ nav ul li a:hover{
 
 .nav-div ul{
     margin-right: 50px;
+   
+    
+}
+
+.btnContainer{
     position: relative;
-    
+    font-weight: 500;
+    font-family: "Bebas Neue", sans-serif;
+    height: 80px;
+    align-items: center;
+    font-size: 22px;
+    letter-spacing: 3px;
+
+
+}
+.lightbtn{
+      /* padding: 9px 7px 8px 7px; */
+      padding: 12px 20px;
+      border-width: 1px;
+      border-color: rgb(255, 255, 255);
+      border-style: solid;
+      text-decoration: none;
+
+      
 }
 
-.btn{
-    padding: 9px 7px 8px 7px;
-    border-width: 1px;
-     border-color: rgb(255, 255, 255);
-     border-style: solid;
-}
-
-.btn:hover{
-    
+.lightbtn:hover{
     background-color: white;
     color: #343a40;
 }
 
-.btn::after{
+.darkbtn{
+    padding: 12px 20px;
+    border-width: 1px;
+    border-color: rgb(2, 2, 2);
+    border-style: solid;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+#feature-btn:hover{
+    background-color: rgb(207, 66, 66);
+    color: #f3f5f7;
+}
+
+.lightbtn::after {
     content: "";
-    height: 48px;
-    width: 0px;
+    height: 56px;
+    width: 104%;
     border: 1px solid rgb(255, 255, 255);
-    position:absolute;
-    right: 20px;
-    top:-8px;
+    border-top: transparent;
+    border-left: transparent;
+    position: absolute;
+    right: -6px;
+    top: -9px;
 }
 
-.btn::before{
+.darkbtn::after {
     content: "";
-    height: 0px;
-    width: 144px;
-    border: 1px solid rgb(255, 254, 254);
-    position:absolute;
-    right: 20px;
-    top:40px;
+    height: 56px;
+    width: 104%;
+    border: 1px solid rgb(0, 0, 0);
+    border-top: transparent;
+    border-left: transparent;
+    position: absolute;
+    right: -6px;
+    top: -9px;
 }
-
-.btn::before:hover{
-    width: 30px;
-}
-
 .onscroll {
-    backdrop-filter: blur(7px);
+    backdrop-filter: blur(5px);
     background-color:rgba(0,0,0,0.2);
-    /* padding: 30px 60px; */
   }
 
 
-
+.contactus{
+    top:80%;
+}
 
   /* HomeSection */
   /* ----------------------------------------------------------------------------------------------------- */
@@ -127,7 +155,7 @@ nav ul li a:hover{
     z-index: 2;
 }
 
-  figure{
+  .home-figure{
     height: 700px;
     background: linear-gradient(to top right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
    
@@ -186,11 +214,11 @@ nav ul li a:hover{
   }
   
 .hero-innerContainer h1 {
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 100px;
+    line-height: 86px;
     letter-spacing: 1px;
     margin-bottom: 30px;
-    font-weight: 600;
+    font-weight: 400;
   }
   
   .hero-innerContainer h2 {
@@ -201,7 +229,7 @@ nav ul li a:hover{
   }
 
 .hero-innerContainer  {
-    font-family: "Roboto Flex", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 17px;
     line-height: 38px;
     margin-bottom: 35px;
@@ -211,3 +239,144 @@ nav ul li a:hover{
     scale: 1.3;
 }
 
+.hero-innerContainer p{
+    margin-bottom: 40px;
+}
+
+
+
+/* ================================================================================================ */
+
+/* FeatureRow */
+
+.credit-text-line
+{
+    border-left: 1px solid #b19f70;
+    height: 300px;
+    position: absolute;
+    left: 51px;
+    bottom: 425px;
+    
+}
+.credit-text{
+    transform: rotate(-90deg);
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: 345px;
+    font-size: 17px;
+    line-height: 27px;
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 400;
+}
+
+.Feature-outer-container{
+    position: relative;
+    z-index: -1;
+    /* background-color: #e8e7dd; */
+    background-color: rgb(229 229 229);
+    border: 2px solid black;
+    padding: 70px;
+    height: 90vh;
+}
+
+.left-Div{
+    position: absolute;
+    width: 45%;
+
+}
+
+.right-Div{
+    position: absolute;
+    width: 55%;
+    right: 0px; 
+}
+
+.img1{
+    position: relative;
+    z-index: -1;
+    display: inline-block;
+}
+
+.figcaption{
+    position: absolute;
+    top:40px;
+    left: 40px;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 23px;
+    line-height: 29px;
+    font-weight: 400;
+}
+.gradient{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1));
+    opacity: 0.5;
+
+     }
+
+.img2{
+        position: relative;
+        display: inline-block;
+        top:-150px;
+        height: 300px;
+        width: 390px;
+        overflow: hidden;
+        left:340px;
+       
+}
+.img2  img {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 300px;
+    margin-left: 342px;
+    margin-left: 0px;
+}
+
+
+.feature-heading{
+    width: 80%;
+}
+.feature-heading h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 70px;
+    line-height: 70px;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    margin: 30px;
+    color: #343a40;
+}
+
+.feature-para{
+    margin-left: 250px;
+    width: 50%;
+    
+}
+.feature-para p{
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 400;
+    color:#363839;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.right-Div span p{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 27px;
+    line-height: 21px;
+    font-weight: 400px;
+    color: #343a40;
+}
+.browncolor{
+    color:#b19f70;
+}
+
+.transparentcolor
+{
+    background-color: transparent;
+}
+/* ==================================================================================================== */
